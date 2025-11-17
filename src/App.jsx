@@ -4,8 +4,7 @@ import './App.css'
 
 import Homapage from './pages/Homapage'
 import About from './pages/About'
-import Prodotti from './pages/Prodotti'
-import Navbar from './components/Navbar'
+import Products from './pages/Products'
 import DefaultLayout from './Layouts/DefaultLayout'
 
 function App() {
@@ -17,7 +16,7 @@ function App() {
           <Route path='/' element={<DefaultLayout />}>
             <Route path='/' element={<Homapage />} />
             <Route path='/chi-siamo' element={<About />} />
-            <Route path='/prodotti' element={<Prodotti />} />
+            <Route path='/prodotti' element={<Products />} />
           </Route >
         </Routes>
       </BrowserRouter >

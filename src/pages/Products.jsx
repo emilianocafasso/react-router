@@ -33,7 +33,6 @@ export default function Prodotti() {
                                 <h5 className="card-title">{product.title}</h5>
                             </div>
                         </div>
-
                     </div>
 
                 ))}
