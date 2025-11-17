@@ -3,18 +3,41 @@ import { useState, useEffect, useEffectEvent } from "react"
 
 export default function Prodotti() {
     const api = 'https://fakestoreapi.com/products'
-    const [producs, setProducts] = useState([])
+    const [products, setProducts] = useState([])
 
     useEffect(() => {
         axios.get(api)
-            .then(res => setProducts(res.data))
+            .then((res) => {
+                setProducts(res.data)
+                console.log(res.data);
+            })
             .catch(err => console.error('Errore', err))
-    })
+    }, [])
 
 
     return (
-        <>
+        <div className="container">
+            <h1 className="my-4">Prodotti</h1>
+            <div className="row">
+                {products.map(product => (
 
-        </>
+                    <div key={product.id} className="col-3 mb-4">
+                        <div className="card" style={{ minHeight: '350px' }}>
+                            <img
+                                src={product.image}
+                                alt={product.title}
+                                className="card-img-top pt-4"
+                                style={{ height: '200px', padding: '10px', objectFit: 'contain' }}
+                            />
+                            <div className="card-body">
+                                <h5 className="card-title">{product.title}</h5>
+                            </div>
+                        </div>
+
+                    </div>
+
+                ))}
+            </div>
+        </div >
     )
 }

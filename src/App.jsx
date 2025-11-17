@@ -6,22 +6,21 @@ import Homapage from './pages/Homapage'
 import About from './pages/About'
 import Prodotti from './pages/Prodotti'
 import Navbar from './components/Navbar'
+import DefaultLayout from './Layouts/DefaultLayout'
 
 function App() {
 
   return (
     <>
       <BrowserRouter>
-        <Navbar />
-        <div className='container mt-4'>
-          <Routes>
+        <Routes>
+          <Route path='/' element={<DefaultLayout />}>
             <Route path='/' element={<Homapage />} />
             <Route path='/chi-siamo' element={<About />} />
             <Route path='/prodotti' element={<Prodotti />} />
-          </Routes>
-        </div>
-
-      </BrowserRouter>
+          </Route >
+        </Routes>
+      </BrowserRouter >
     </>
   )
 }
