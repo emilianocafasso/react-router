@@ -23,7 +23,7 @@ export default function Prodotti() {
                 {products.map(product => (
 
                     <div key={product.id} className="col-3 mb-4">
-                        <Link to={`/prodotti/${product.id}`} className="card" style={{ minHeight: '350px' }}>
+                        <Link to={`/prodotti/${product.id}`} className="card text-decoration-none" style={{ minHeight: '350px' }}>
                             <img
                                 src={product.image}
                                 alt={product.title}
