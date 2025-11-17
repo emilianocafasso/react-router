@@ -6,6 +6,7 @@ import Homapage from './pages/Homapage'
 import About from './pages/About'
 import Products from './pages/Products'
 import DefaultLayout from './Layouts/DefaultLayout'
+import ProductPage from './pages/ProductPage'
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
             <Route path='/' element={<Homapage />} />
             <Route path='/chi-siamo' element={<About />} />
             <Route path='/prodotti' element={<Products />} />
+            <Route path='/prodotti/:id' element={<ProductPage />} />
           </Route >
         </Routes>
       </BrowserRouter >

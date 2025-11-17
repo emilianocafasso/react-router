@@ -1,5 +1,6 @@
 import axios from "axios"
 import { useState, useEffect, useEffectEvent } from "react"
+import { Link } from "react-router-dom"
 
 export default function Prodotti() {
     const api = 'https://fakestoreapi.com/products'
@@ -22,7 +23,7 @@ export default function Prodotti() {
                 {products.map(product => (
 
                     <div key={product.id} className="col-3 mb-4">
-                        <div className="card" style={{ minHeight: '350px' }}>
+                        <Link to={`/prodotti/${product.id}`} className="card" style={{ minHeight: '350px' }}>
                             <img
                                 src={product.image}
                                 alt={product.title}
@@ -32,7 +33,7 @@ export default function Prodotti() {
                             <div className="card-body">
                                 <h5 className="card-title">{product.title}</h5>
                             </div>
-                        </div>
+                        </Link>
                     </div>
 
                 ))}
