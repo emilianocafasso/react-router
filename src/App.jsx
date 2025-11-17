@@ -13,11 +13,13 @@ function App() {
     <>
       <BrowserRouter>
         <Navbar />
-        <Routes>
-          <Route path='/' element={<Homapage />} />
-          <Route path='/chi-siamo' element={<About />} />
-          <Route path='/prodotti' element={<Prodotti />} />
-        </Routes>
+        <div className='container mt-4'>
+          <Routes>
+            <Route path='/' element={<Homapage />} />
+            <Route path='/chi-siamo' element={<About />} />
+            <Route path='/prodotti' element={<Prodotti />} />
+          </Routes>
+        </div>
 
       </BrowserRouter>
     </>

@@ -2,7 +2,7 @@ export default function Homapage() {
 
     return (
         <>
-            Homapage
+            Benvenuto nel mio primo React Router Store
         </>
     )
 }
